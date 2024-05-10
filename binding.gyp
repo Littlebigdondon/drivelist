@@ -12,7 +12,7 @@
         "VCCLCompilerTool": { "ExceptionHandling": 1 },
       },
       'include_dirs': [
-        "<!@(node -p 'process.platform === `darwin` ? require(`node-addon-api`).include.replaceAll(` `, `\\\ `) : require(`node-addon-api`).include')",
+        "<!@(node includeDirs.js)",
         "."
       ],
       'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
